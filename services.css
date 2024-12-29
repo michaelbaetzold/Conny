@@ -1,0 +1,35 @@
+/* Services Page Styles */
+.services-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.services-content h1 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service {
+    margin-bottom: 40px;
+}
+
+.service h2 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.service p {
+    margin-bottom: 10px;
+}
+
+.service ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.service ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid var(--secondary-color);
+}

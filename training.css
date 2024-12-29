@@ -1,0 +1,138 @@
+.training-item {
+    flex: 0 1 300px; /* Feste Größe von 250px */
+    width: 300px; /* Feste Größe von 250px */
+    height: 300px; /* Feste Größe von 250px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.training-icon {
+    font-size: 64px; /* Größe des Icons, angepasst für größere Darstellung */
+    margin-bottom: 15px;
+}
+
+.training-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.training-description {
+    font-size: 16px;
+}
+
+.text-with-image {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+}
+
+.text-with-image img.side-image {
+    width: 150px; /* Breite des Bildes */
+    height: auto; /* Automatische Höhe, um das Seitenverhältnis beizubehalten */
+    margin-right: 20px; /* Abstand zum Text */
+}
+
+.split-layout {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.text-section {
+    flex: 1;
+    min-width: 300px; /* Min-width to ensure text section has reasonable width */
+}
+
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-section img.side-image {
+    max-width: 400px; /* Ensures the image does not overflow its container */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+.requirements-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.requirement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.requirement-icon {
+    font-size: 30px;
+    margin-right: 15px;
+    color: var(--primary-color);
+}
+
+
+ul {
+    list-style-type: none; /* Entfernt die Aufzählungszeichen */
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--secondary-color);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px); /* Drei Elemente pro Zeile */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul li i {
+    font-size: 48px; /* Größere Icons */
+    margin-bottom: 10px;
+    color: var(--primary-color); /* Farbe der Icons */
+}
+
+ul li h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: var(--primary-color); /* Farbe der Überschrift */
+}
+
+ul.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}

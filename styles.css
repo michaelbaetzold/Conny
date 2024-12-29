@@ -1,0 +1,195 @@
+:root {
+    --primary-color: #003366;
+    --secondary-color: #1e90ff;
+    --light-color: #e0f7ff;
+    --accent-color: #b0c4de;
+    --text-color: #003366;
+    --background-color: #f0f8ff;
+    font-size: 20px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start; /* Änderung von center zu flex-start */
+    align-items: center;
+    padding: 10px 20px; /* Reduziertes Padding */
+}
+
+.toolbar {
+    background-color: var(--primary-color);
+    overflow: hidden;
+    border-bottom: 2px solid var(--accent-color);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 70px;
+    width: auto;
+    margin-right: 20px; /* Abstand zwischen Logo und Navigation */
+}
+
+.toolbar a {
+    display: block;
+    color: var(--accent-color);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
+.toolbar a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.toolbar .icon {
+    display: none;
+}
+
+#navLinks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--background-color);
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: var(--text-color);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid var(--accent-color);
+}
+
+#scrollButton {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+    z-index: 1000;
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#scrollButton:hover {
+    background-color: var(--primary-color);
+}
+
+.footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid var(--accent-color);
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 600px) {
+    .toolbar a { 
+        display: none;
+    }
+    .toolbar a.icon {
+        float: right;
+        display: block;
+        color: white;
+    }
+    #navLinks {
+        display: none;
+        flex-direction: column;
+    }
+    #navLinks a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    ul li {
+        flex: 1 1 calc(50% - 20px); /* Zwei Elemente pro Zeile bei kleineren Bildschirmen */
+    }
+
+    .gallery-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    .text-with-image {
+        flex-direction: column;
+    }
+
+    .text-with-image img.side-image {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .split-layout {
+        flex-direction: column;
+    }
+
+    .text-section {
+        order: 2;
+    }
+
+    .image-section {
+        order: 1;
+        margin-bottom: 20px; /* Adds some space between the image and text */
+    }
+}
+
+@media (max-width: 480px) {
+    ul li {
+        flex: 1 1 100%; /* Ein Element pro Zeile bei sehr kleinen Bildschirmen */
+    }
+
+    .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

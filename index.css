@@ -1,0 +1,39 @@
+/* Standard-Styling */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.intro, .bio {
+    flex: 1 1 60%;
+    min-width: 300px;
+    max-width: 800px;
+}
+
+.bio-image {
+    flex: 1 1 30%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bio-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Mobiles Styling */
+@media (max-width: 768px) {
+    .bio-image {
+        order: -1; /* Bild vor dem Text anzeigen */
+    }
+    
+    .intro, .bio, .bio-image {
+        flex: 1 1 100%;
+    }
+}
